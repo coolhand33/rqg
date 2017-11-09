@@ -1,0 +1,29 @@
+<template>
+  <div class="main-contain">
+    <h1>${heading}</h1>
+    <div class="quote-container">
+      <div class="quote flex-item">
+        <div show.bind="loading" class="loader">
+            <i class="fa fa-spinner fa-pulse"></i>
+        </div>
+        <blockquote show.bind="!loading">
+          ${ quote }
+          <br>
+          <small> ${ author }</small>
+        </blockquote>
+      </div>
+    </div>
+    <div class="button-section">
+      <button click.delegate="getQuote()" class="btn" href="">Get New Quote</button>
+    </div>
+    <div id="footer">
+      <span id="copy">&copy;2017 &ndash; Clint Broadhead</span>
+      <span id="social_media">
+        <a href="https://www.linkedin.com/in/clint-broadhead-340686140/"><i class="fa fa-linkedin fa-2x"></i></a>
+        <a href="https://github.com/coolhand33"><i class="fa fa-github fa-2x"></i></a>
+        <a href="https://codepen.io/coolhand33"><i class="fa fa-codepen fa-2x"></i></a>
+        <a href="https://twitter.com/cbslc33"><i class="fa fa-twitter fa-2x"></i></a>
+      </span>
+    </div>
+  </div>
+</template>
