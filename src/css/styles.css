@@ -11,7 +11,7 @@ h1 {
   margin: 0;
 }
 
-.main-contain {
+#main_contain {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,7 +23,11 @@ h1 {
   padding: 15px;
 }
 
-.quote-container {
+#main_contain > *:not(#footer) {
+  align-self: center;
+}
+
+#quote_container {
   margin-top: 75px;
   height: 175px;
 }
@@ -65,19 +69,47 @@ blockquote > small:before {
 #footer {
   margin-top: 30px;
   display: flex;
-  justify-content: space-between;
 }
 
 #footer > * {
   align-self: flex-end;
-  flex-basis: 1 auto;
+}
+
+#copy {
+  flex: 2 1 auto;
 }
 
 #social_media {
-  width: 300px;
+  display: flex;
+  justify-content: flex-end;
+  flex: 1 1 auto;
+}
+
+#social_media > a:not(:last-of-type) {
+  margin-right: 2.0em;
 }
 
 #footer a {
   text-decoration: none;
   color: #89a9a2;
+}
+
+@media screen and (max-width: 450px) {
+  #main_contain {
+    margin: 0;
+  }
+
+  #quote_container {
+    margin-top: 1.3em;
+    height: 250px;
+    overflow: hidden;
+  }
+
+  #footer {
+    flex-direction: column;
+  }
+
+  #footer > * {
+    align-self: center;
+  }
 }
