@@ -16,7 +16,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   max-width: 1024px;
-  margin: 25px 10px 0;
+  margin: 25px auto 0;
   background: #d9d9d9;
   border: 1px solid transparent;
   border-radius: 10px;
