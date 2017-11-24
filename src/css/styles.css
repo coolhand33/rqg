@@ -16,7 +16,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   max-width: 1024px;
-  margin: 25px auto 0;
+  margin: 25px 10px 0;
   background: #d9d9d9;
   border: 1px solid transparent;
   border-radius: 10px;
@@ -55,6 +55,7 @@ h1 {
   color: #89a9a2;
   border-color: #89a9a2;
   background-color: transparent;
+  cursor: pointer;
 }
 
 blockquote {
@@ -94,7 +95,7 @@ blockquote > small:before {
   color: #89a9a2;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   #main_contain {
     margin: 0;
   }
@@ -111,5 +112,18 @@ blockquote > small:before {
 
   #footer > * {
     align-self: center;
+  }
+
+  #copy {
+    order: 1;
+    padding-top: 15px;
+  }
+
+  .btn:hover,
+  .btn:active {
+    text-decoration: none;
+    color: #e9e9e9;
+    border-color: #89a9a2;
+    background-color: #89a9a2;
   }
 }

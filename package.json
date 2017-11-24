@@ -1,10 +1,10 @@
 {
   "name": "random-quote-generator",
-  "version": "1.0.0",
-  "description": "Another randomj quote generating app",
+  "version": "1.0.1",
+  "description": "Another random quote generating app",
   "main": "dist/app.bundle.js",
   "repository": {
-    "url": "",
+    "url": "https://github.com/coolhand33/rqg",
     "type": "git"
   },
   "author": "Clint Broadhead <clint@broadhead.co>",

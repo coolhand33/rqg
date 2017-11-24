@@ -3,6 +3,27 @@ import {inject} from 'aurelia-framework';
 
 @inject(HttpClient)
 export class App {
+  quote;
+  quotes;
+  social = [
+    {
+      url: 'https://www.linkedin.com/in/clint-broadhead-340686140/',
+      icon: 'linkedin'
+    },
+    {
+      url: 'https://github.com/coolhand33',
+      icon: 'github'
+    },
+    {
+      url: 'https://codepen.io/coolhand33',
+      icon: 'codepen'
+    },
+    {
+      url: 'https://twitter.com/cbslc33',
+      icon: 'twitter'
+    }
+  ];
+
   constructor(httpClient) {
     this.loading = true;
     this.httpClient = httpClient;
@@ -21,10 +42,9 @@ export class App {
 
   getQuote() {
     if (this.quotes.length > 0) {
-      //quotes api delivers 100 quotes, this will select a random index between 0 and 99
-      let quoteIndex = Math.floor(Math.random() * (99 - 0 + 1)) + 0;
-      this.quote = this.quotes[quoteIndex].quote;
-      this.author = this.quotes[quoteIndex].author;
+      //quotes api should deliver 100 quotes, this will select a random index between 0 and number of quotes - 1
+      let quoteIndex = Math.floor(Math.random() * (this.quotes.length));
+      this.quote = this.quotes[quoteIndex];
     }
   }
 }
